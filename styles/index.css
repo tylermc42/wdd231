@@ -1,0 +1,177 @@
+:root {
+    --main-color: blanchedalmond;
+    --second-color: cadetblue;
+    --third-color: rgb(182, 180, 180);
+    --header-font: "Playwrite AU SA", serif;
+    --support-font: "Inter", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: var(--header-font);
+}
+
+p {
+    font-family: var(--support-font);
+}
+
+header, footer {
+    background-color: var(--main-color);
+}
+
+header {
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header span {
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header span img {
+    padding-right: 1rem;
+}
+
+main {
+    background-color: var(--second-color);
+}
+
+footer {
+    background-color: blanchedalmond;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+nav a {
+    color: black;
+    font-size: large;
+    text-decoration: none;
+    margin: 3rem;
+}
+nav a:hover {
+    text-decoration: underline;
+    font-size: larger;
+}
+
+nav a.active {
+    font-weight: bold;
+    background-color: var(--third-color);
+}
+nav {
+    display: flex;
+    display: block;
+    list-style: none;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    flex-wrap: wrap;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+section {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.course-buttons, .course-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+    justify-content: center;
+}
+
+
+.course-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #34495e;
+    color: white;
+}
+
+.course-buttons button:hover {
+    background-color: #2c3e50;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.course-card {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.course-card.completed {
+    background-color: #e0f7e0;
+    border: 2px solid #2ecc71;
+}
+
+/* Screens smaller than 1200px */
+@media (max-width: 1200px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-list {
+        grid-template-columns: 1fr;
+    }
+    .menu-toggle {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+}
+
