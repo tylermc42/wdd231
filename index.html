@@ -28,26 +28,29 @@
     </header>
     <main class="home">
         <h1>Home</h1>
-        <section>
-            <h2>Course Work</h2>
-        </section>
-        <section class="flag">
-            <h2>Mexico</h2>
-            <img src="images/mx_flag.png" width="200" alt="Mexican Flag">
-        </section>
-        <section>
-            <h2>Web and Computer Programming Certificate</h2>
-            <p>The total number of courses listed below is <span id="course-count">6</span></p>
-            <p>Total Credits: <span id="total-credits">12</span></p>
-            <div class="course-buttons">
-                <button class="filter-btn" data-filter="ALL">All Courses</button>
-                <button class="filter-btn" data-filter="CSE">CSE Courses</button>
-                <button class="filter-btn" data-filter="WDD">WDD Courses</button>
-            </div>
-            <div class="course-list">
-                <!-- Courses will be dynamically populated -->
-            </div>
-        </section>
+        <div class="sections">
+            <section class="course-work">
+                <h2>Course Work</h2>
+            </section>
+            <section class="place">
+                <h2>Mexico</h2>
+                <img src="images/mx_flag.png" width="200" alt="Mexican Flag">
+                <figcaption>Mexican Flag</figcaption>
+            </section>
+            <section class="completed-courses">
+                <h2>Web and Computer Programming Certificate</h2>
+                <p>The total number of courses listed below is <span id="course-count">6</span></p>
+                <p>Total Credits: <span id="total-credits">12</span></p>
+                <div class="course-buttons">
+                    <button class="filter-btn" data-filter="ALL">All Courses</button>
+                    <button class="filter-btn" data-filter="CSE">CSE Courses</button>
+                    <button class="filter-btn" data-filter="WDD">WDD Courses</button>
+                </div>
+                <div class="course-list">
+                    <!-- Courses will be dynamically populated -->
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
         <p>© <span id="copyright-year"></span> | Tyler McCleve | Arizona</p>
