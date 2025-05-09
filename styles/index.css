@@ -1,7 +1,8 @@
 :root {
-    --main-color: blanchedalmond;
-    --second-color: cadetblue;
-    --third-color: rgb(182, 180, 180);
+    --cooper: rgb(206, 92, 23);
+    --red: rgb(191, 10, 48);
+    --blue: rgb(0, 40, 104);
+    --yellow: rgb(254, 215, 0);
     --header-font: "Playwrite AU SA", serif;
     --support-font: "Inter", serif;
 }
@@ -12,7 +13,13 @@
     box-sizing: border-box;
 }
 
-h1, h2 {
+h1 {
+    font-family: var(--header-font);
+    color: 
+    margin-bottom: 1rem;
+}
+
+h2 {
     font-family: var(--header-font);
 }
 
@@ -21,7 +28,7 @@ p {
 }
 
 header, footer {
-    background-color: var(--main-color);
+    background-color: var(--cooper);
 }
 
 header {
@@ -46,11 +53,10 @@ header span img {
 }
 
 main {
-    background-color: var(--second-color);
+    background-color: var(--red);
 }
 
 footer {
-    background-color: blanchedalmond;
     text-align: center;
     padding: 1rem;
 }
@@ -69,7 +75,7 @@ nav a:hover {
 
 nav a.active {
     font-weight: bold;
-    background-color: var(--third-color);
+    font-size: x-large;
 }
 nav {
     display: flex;
@@ -92,20 +98,24 @@ main {
     padding: 1rem;
 }
 
-h1, h2 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-}
-
 section {
-    background-color: white;
+    background-color: var(--yellow);
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
+.place {
+    justify-content: center;
+}
 
+.place img {
+    border: 5px solid black;
+    margin: 0 auto;
+    display: block;
+}
 
 .course-work, .place {
     margin: 1rem;
@@ -156,8 +166,9 @@ section {
 }
 
 .course-card.completed {
-    background-color: #e0f7e0;
+    background-color: var(--blue);
     border: 2px solid #2ecc71;
+    color: white;
 }
 
 @media (min-width: 1200px) {
