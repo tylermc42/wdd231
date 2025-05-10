@@ -45,6 +45,9 @@ header span {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    border-bottom: 2px solid black;
+    padding: 1rem;
 }
 header span img {
     padding-right: 1rem;
