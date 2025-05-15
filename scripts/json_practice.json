@@ -1,0 +1,28 @@
+{
+    "family_name": "McCleve",
+    "date_moved_in": "09/01/2023",
+    "number_of_people": "4",
+    "bishopric_visit": true,
+    "individual_names": [
+        {
+            "name": "Tyler",
+            "gender": "Male",
+            "birthdate": "1999-12-14"
+        },
+        {
+            "name": "Morgan McCleve",
+            "gender": "Female",
+            "birthdate": "1999-07-09"
+        },
+        {
+            "name": "Kinsley McCleve",
+            "gender": "Female",
+            "birthdate": "2022-08-15"
+        },
+        {
+            "name": "Remie McCleve",
+            "gender": "Female",
+            "birthdate": "2025-03-22"
+        }
+    ]
+}
