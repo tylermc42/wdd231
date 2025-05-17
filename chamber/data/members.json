@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Phoenix Tech Solutions",
+    "address": "123 E Main St, Phoenix, AZ 85004",
+    "phone": "(602) 555-0101",
+    "website": "https://phoenixtechsolutions.com",
+    "image": "phoenix_tech.jpg",
+    "membership_level": 3,
+    "additional_info": "Leading IT services provider in Phoenix since 2010."
+  },
+  {
+    "name": "Tucson Bakery Co.",
+    "address": "456 S Stone Ave, Tucson, AZ 85701",
+    "phone": "(520) 555-0202",
+    "website": "https://tucsonbakeryco.com",
+    "image": "tucson_bakery.jpg",
+    "membership_level": 1
+  },
+  {
+    "name": "Scottsdale Realty Group",
+    "address": "789 N Scottsdale Rd, Scottsdale, AZ 85251",
+    "phone": "(480) 555-0303",
+    "website": "https://scottsdalerealtygroup.com",
+    "image": "scottsdale_realty.jpg",
+    "membership_level": 2,
+    "additional_info": "Specializing in luxury properties in Scottsdale."
+  },
+  {
+    "name": "Mesa Auto Repair",
+    "address": "101 W Broadway Rd, Mesa, AZ 85210",
+    "phone": "(480) 555-0404",
+    "website": "https://mesaautorepair.com",
+    "image": "mesa_auto.jpg",
+    "membership_level": 1
+  },
+  {
+    "name": "Flagstaff Outdoor Gear",
+    "address": "202 E Route 66, Flagstaff, AZ 86001",
+    "phone": "(928) 555-0505",
+    "website": "https://flagstaffoutdoorgear.com",
+    "image": "flagstaff_gear.jpg",
+    "membership_level": 3,
+    "additional_info": "Your go-to store for hiking and camping equipment."
+  },
+  {
+    "name": "Chandler Law Firm",
+    "address": "303 N Arizona Ave, Chandler, AZ 85225",
+    "phone": "(480) 555-0606",
+    "website": "https://chandlerlawfirm.com",
+    "image": "chandler_law.jpg",
+    "membership_level": 2
+  },
+  {
+    "name": "Tempe Coffee Roasters",
+    "address": "505 S Mill Ave, Tempe, AZ 85281",
+    "phone": "(480) 555-0707",
+    "website": "https://tempecoffeeroasters.com",
+    "image": "tempe_coffee.jpg",
+    "membership_level": 1,
+    "additional_info": "Locally roasted coffee beans since 2015."
+  }
+]

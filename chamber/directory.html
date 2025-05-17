@@ -4,23 +4,81 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chamber of Commerce Directory</title>
-    <meta name="description" content="Directory page for the Chamber of Commerce website">
+    <meta name="description" content="Directory page for the Arizona Chamber of Commerce, listing member businesses with contact details and membership levels">
     <meta name="author" content="Tyler McCleve">
+    <!--styles-->
     <link rel="stylesheet" href="styles/directory.css">
+    <!--Scripts-->
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/members.js" defer></script>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
+    <!--favicon link-->
+    <link rel="icon" href="favicon_az.ico">
     <!-- Social media meta links -->
     <meta property="og:title" content="Directory">
     <meta property="og:description" content="List of local business and other organizations that belong to the Chamber of Commerce">
-    <meta property="og:image" content="C:\Users\freig\Documents\BYU_Idaho\wdd231\chamber\images\facebook_tag_resize.jpg">
-    <meta property="og:url" content="https://tylermc42.github.io/wdd231/chamber">
-
+    <meta property="og:image" content="C:/Users/freig/Documents/BYU_Idaho/wdd231/chamber/images/capital_original.jpg">
+    <meta property="og:url" content="https://tylermc42.github.io/wdd231/chamber/">
 </head>
 <body>
-    <header><h1>Page Title</h1>
-        <nav></nav>
+    <header>
+        <div class="logo">
+        <img src="images/capital_resize.jpg" alt="Arizona Chamber of Commerce Logo">
+        <h1>Arizona Chamber of Commerce</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleNav()">☰</button>
+        <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html" class="active">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </nav>
     </header>
-    <main></main>
-    <footer><p>&copy; <span id='copyright-year'></span> | Tyler McCleve | BYU Idaho | WDD 231</p>
-    <p>Date Last Modified: <span id='last-modified'></span></p></footer>
+    <main>
+        <div class="view-toggle">
+            <button id="grid-view" onclick="toggleView('grid')">Grid View</button>
+            <button id="list-view" onclick="toggleView('list')">List View</button>
+        </div>
+        <div id="cards">
+        <!-- Members will be dynamically inserted here -->
+        </div>
+    </main>
+    <footer>
+        <div class="footer_left">
+            <p>
+                Arizona Chamber of Commerce<br>
+                100 N 7th Ave #120<br>
+                Phoenix, AZ 85007<br>
+                membership@azchamber.com<br>
+                (602)248-4430
+            </p>
+        </div>
+        <div class="social_links">
+            <nav class="sociallinks">
+                <a href="https://facebook.com">
+                    <img src="images/facebook.jpg" alt='Facebook' height="50">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="images/x.png" alt='X' height="50">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram.jpg" alt='Instagram' height="50">
+                </a>
+            </nav>
+        </div>
+        <div class="footer_right">
+            <p>
+                WDD  231 Class Project<br>
+                Tyler McCleve</p>
+            <p>© <span id="copyright-year"></span> Arizona Chamber of Commerce</p>
+            <p>Date Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
 </body>
 <script src='scripts/getdates.js' defer></script>
 </html>
