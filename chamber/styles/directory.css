@@ -27,6 +27,12 @@ header, footer {
     padding: 1rem;
 }
 
+.site-title {
+    font-family: var(--header-font);
+    font-size: 2rem; 
+    color: white; 
+}
+
 header {
     display: flex;
     flex-direction: column;
