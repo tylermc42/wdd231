@@ -317,8 +317,62 @@ footer {
 
 /* ----------------INDEX PAGE--------------------*/
 
-main h2 {
-    color: white;
+.hero_image img {
+    width: 100%;
+}
+
+.call_to_action li {
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    background-color: lightblue;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.call_to_action a {
+    font-size: x-large;
+    text-decoration: none;
+    color: black;
+}
+
+.call_to_action a:hover {
+    text-decoration: underline;
+}
+
+main h1 {
+    color: black;
+}
+
+/* Current Events Section */
+#current-events {
+    background-color: lightblue;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#current-events h3 {
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+    font-size: xx-large;
+}
+
+#events-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#events-container p {
+    margin: 0.2rem 0;
+    font-size: 1rem;
 }
 
 /* Weather Widget */
@@ -441,5 +495,10 @@ main h2 {
 
     #spotlight-container {
         grid-template-columns: 1fr;
+    }
+
+    #events-container {
+        flex-direction: column;
+        align-items: center;
     }
 }
