@@ -23,7 +23,7 @@ p {
 
 header, footer {
     background-color: var(--cooper);
-    color: white;
+    color: black;
     padding: 1rem;
 }
 
@@ -306,5 +306,134 @@ footer {
     }
     #cards p {
         font-size: 0.9rem;
+    }
+}
+
+/* ----------------INDEX PAGE--------------------*/
+
+main h2 {
+    color: white;
+}
+
+/* Weather Widget */
+#weather {
+    background-color: lightblue;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#weather h3 {
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+    font-size: xx-large;
+}
+
+#current-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#current-weather img {
+    width: 50px;
+    height: auto;
+}
+
+#forecast {
+    margin-top: 1rem;
+}
+
+#forecast h4 {
+    font-size: larger;
+    border-top: 1px solid black;
+    padding-top: 10px;
+}
+
+#forecast-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.forecast-day {
+    background-color: var(--list-bg-alt);
+    padding: 0.5rem;
+    border-radius: 5px;
+    flex: 1;
+    min-width: 100px;
+    text-align: center;
+}
+
+.forecast-day p {
+    margin: 0.2rem 0;
+}
+
+.forecast-day img {
+    width: 40px;
+    height: auto;
+}
+
+/* Spotlight Section */
+#spotlight {
+    background-color: lightblue;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#spotlight h3 {
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+    font-size: x-large;
+}
+
+#spotlight-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.5rem;
+}
+
+.spotlight-card {
+    background-color: var(--list-bg-alt);
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.spotlight-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.spotlight-card h4 {
+    font-family: var(--header-font);
+    color: var(--blue);
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.spotlight-card p {
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #forecast-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .forecast-day {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #spotlight-container {
+        grid-template-columns: 1fr;
     }
 }
