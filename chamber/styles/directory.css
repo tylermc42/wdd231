@@ -249,102 +249,49 @@ footer {
     color: var(--yellow);
 }
 
-/* Responsive Design */
-@media (max-width: 1445px) {
-    .menu-toggle {
-        display: block;
-    }
-    nav {
-        width: 100%;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (min-width: 1446px) {
-    .menu-toggle {
-        display: none;
-    }
-    nav {
-        max-height: none;
-        overflow: visible;
-        background-color: transparent;
-    }
-}
-
-@media (max-width: 768px) {
-    #cards.list-view section {
-        flex-direction: column;
-        text-align: center;
-    }
-    #cards.list-view img {
-        width: 300px;
-        height: auto;
-    }
-}
-
-@media (max-width: 320px) {
-    .logo img {
-        width: 150px;
-    }
-    h1 {
-        font-size: 1.2rem;
-    }
-    nav a {
-        margin: 0.5rem;
-        font-size: 1rem;
-    }
-    .view-toggle button {
-        padding: 0.3rem 0.5rem;
-        margin: 0 0.2rem;
-        font-size: 0.9rem;
-    }
-    #cards.grid-view {
-        grid-template-columns: 1fr;
-    }
-    #cards section {
-        padding: 0.5rem;
-    }
-    #cards h3 {
-        font-size: 1rem;
-    }
-    #cards p {
-        font-size: 0.9rem;
-    }
-}
-
-/* ----------------INDEX PAGE--------------------*/
-
-.hero_image img {
+/* Hero and Call to Action */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
-.call_to_action li {
-    list-style: none;
-    justify-content: center;
-    display: flex;
-    padding: 1rem;
-    flex-wrap: wrap;
-    border: 1px solid black;
-    background-color: lightblue;
+.hero_image img {
     width: 90%;
-    margin: auto 0;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+}
+
+.call_to_action {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--yellow);
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 .call_to_action a {
-    font-size: x-large;
+    font-family: var(--support-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--blue);
     text-decoration: none;
-    color: black;
+    white-space: nowrap;
 }
 
 .call_to_action a:hover {
+    color: var(--cooper);
     text-decoration: underline;
-}
-
-main h1 {
-    color: black;
 }
 
 /* Current Events Section */
@@ -481,23 +428,101 @@ main h1 {
 }
 
 /* Responsive Design */
+@media (max-width: 1445px) {
+    .menu-toggle {
+        display: block;
+    }
+    nav {
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1446px) {
+    .menu-toggle {
+        display: none;
+    }
+    nav {
+        max-height: none;
+        overflow: visible;
+        background-color: transparent;
+    }
+}
+
 @media (max-width: 768px) {
+    .call_to_action {
+        bottom: 10%;
+        padding: 0.5rem 1rem;
+    }
+    .call_to_action a {
+        font-size: 1.2rem;
+    }
+    #cards.list-view section {
+        flex-direction: column;
+        text-align: center;
+    }
+    #cards.list-view img {
+        width: 300px;
+        height: auto;
+    }
+    .hero_image img {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
     #forecast-container {
         flex-direction: column;
         align-items: center;
     }
-
     .forecast-day {
         width: 100%;
         max-width: 300px;
     }
-
     #spotlight-container {
         grid-template-columns: 1fr;
     }
-
     #events-container {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo img {
+        width: 150px;
+    }
+    h1 {
+        font-size: 1.2rem;
+    }
+    nav a {
+        margin: 0.5rem;
+        font-size: 1rem;
+    }
+    .view-toggle button {
+        padding: 0.3rem 0.5rem;
+        margin: 0 0.2rem;
+        font-size: 0.9rem;
+    }
+    #cards.grid-view {
+        grid-template-columns: 1fr;
+    }
+    #cards section {
+        padding: 0.5rem;
+    }
+    #cards h3 {
+        font-size: 1rem;
+    }
+    #cards p {
+        font-size: 0.9rem;
+    }
+    .call_to_action {
+        bottom: 5%;
+        padding: 0.4rem 0.8rem;
+    }
+    .call_to_action a {
+        font-size: 1rem;
     }
 }

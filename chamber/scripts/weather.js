@@ -32,7 +32,8 @@ function displayCurrentWeather(data) {
     const description = document.querySelector('#current-description');
 
     temp.textContent = Math.round(data.main.temp);
-    icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+    // Use @2x for higher resolution
+    icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     icon.alt = data.weather[0].description;
     description.textContent = data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1);
 }
@@ -67,7 +68,7 @@ function displayForecast(data) {
         forecastDay.innerHTML = `
             <p><strong>${day}</strong></p>
             <p>${temp} °F</p>
-            <img src="https://openweathermap.org/img/wn/${icon}.png" alt="${description}">
+            <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}">
             <p>${description.charAt(0).toUpperCase() + description.slice(1)}</p>
         `;
         container.appendChild(forecastDay);
