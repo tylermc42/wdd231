@@ -325,13 +325,12 @@ footer {
     list-style: none;
     justify-content: center;
     display: flex;
-    gap: 0.5rem;
     padding: 1rem;
     flex-wrap: wrap;
     border: 1px solid black;
     background-color: lightblue;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    width: 90%;
+    margin: auto 0;
 }
 
 .call_to_action a {
