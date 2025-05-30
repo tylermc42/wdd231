@@ -20,6 +20,13 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+#error-message {
+    display: none;
+    color: var(--cooper);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
 fieldset {
     border: none;
     margin-bottom: 1.5rem;
@@ -92,6 +99,7 @@ button[type="submit"]:hover {
 }
 
 #thank-you-message {
+    display: none;
     text-align: center;
     background-color: var(--list-bg-alt);
     padding: 2rem;
