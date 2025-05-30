@@ -40,48 +40,11 @@
         </nav>
     </header>
     <main>
-        <h1>Join the Arizona Chamber of Commerce</h1>
-        <div id="error-message"></div>
-        <form id="join-form" action="thank-you.html" method="POST">
-            <fieldset>
-                <legend>Your Information</legend>
-                <label for="first-name">First Name <span class="required">*</span></label>
-                <input type="text" id="first-name" name="first-name" required>
-
-                <label for="last-name">Last Name <span class="required">*</span></label>
-                <input type="text" id="last-name" name="last-name" required>
-
-                <label for="email">Email <span class="required">*</span></label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone">
-            </fieldset>
-
-            <fieldset>
-                <legend>Business Information</legend>
-                <label for="business-name">Business Name <span class="required">*</span></label>
-                <input type="text" id="business-name" name="business-name" required>
-
-                <label for="business-title">Business Title/Position <span class="required">*</span></label>
-                <input type="text" id="business-title" name="business-title" required>
-
-                <label for="business-description">Business Description</label>
-                <textarea id="business-description" name="business-description" maxlength="500"></textarea>
-                <div class="help-text">Provide a brief description of your business (max 500 characters).</div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Membership Level <span class="required">*</span></legend>
-                <label><input type="radio" name="membership-level" value="member" required> Member</label>
-                <label><input type="radio" name="membership-level" value="bronze"> Bronze</label>
-                <label><input type="radio" name="membership-level" value="silver"> Silver</label>
-                <label><input type="radio" name="membership-level" value="gold"> Gold</label>
-            </fieldset>
-
-            <input type="hidden" id="submission-timestamp" name="submission-timestamp">
-            <button type="submit">Join Now</button>
-        </form>
+        <div id="thank-you-message">
+            <h3>Thank You for Joining!</h3>
+            <p>We’ve received your application and will be in touch soon.</p>
+            <p><a href="join.html">Submit another application</a></p>
+        </div>
     </main>
     <footer>
         <div class="footer_left">

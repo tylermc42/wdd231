@@ -99,7 +99,6 @@ button[type="submit"]:hover {
 }
 
 #thank-you-message {
-    display: none;
     text-align: center;
     background-color: var(--list-bg-alt);
     padding: 2rem;

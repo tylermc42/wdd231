@@ -1,7 +1,10 @@
-// Set the submission timestamp
-document.getElementById('submission-timestamp').value = new Date().toISOString();
+// Set the submission timestamp if the field exists
+const submissionTimestamp = document.getElementById('submission-timestamp');
+if (submissionTimestamp) {
+    submissionTimestamp.value = new Date().toISOString();
+}
 
-// Update last modified date
+// Set the last modified date
 document.getElementById('last-modified').textContent = document.lastModified;
 
 // Menu toggle functionality
@@ -13,18 +16,16 @@ menuToggle.addEventListener('click', () => {
     menuToggle.setAttribute('aria-expanded', nav.classList.contains('active'));
 });
 
-// Form submission simulation with custom error message
+// Form submission with validation
 const form = document.getElementById('join-form');
-const formFields = document.getElementById('form-fields');
-const thankYouMessage = document.getElementById('thank-you-message');
 const errorMessage = document.getElementById('error-message');
 form.addEventListener('submit', (e) => {
-    e.preventDefault();
     if (form.checkValidity()) {
-        formFields.style.display = 'none';
-        thankYouMessage.style.display = 'block';
+        // Form is valid, allow default submission to thank-you.html
         errorMessage.style.display = 'none';
     } else {
+        // Form is invalid, prevent submission and show error
+        e.preventDefault();
         errorMessage.textContent = 'Please fill out all required fields correctly.';
         errorMessage.style.display = 'block';
         form.reportValidity();
