@@ -1,8 +1,13 @@
-// Toggle navigation for mobile
-function toggleNav() {
-    const nav = document.getElementById('nav-menu');
+
+// Menu toggle functionality
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+menuToggle.setAttribute('aria-expanded', 'false'); // Initial state
+menuToggle.addEventListener('click', () => {
     nav.classList.toggle('active');
-}
+    menuToggle.setAttribute('aria-expanded', nav.classList.contains('active'));
+});
+
 
 // Toggle between grid and list view
 function toggleView(view) {
