@@ -1,10 +1,14 @@
-:root {
-    --cooper: rgb(206, 92, 23);
-    --red: rgb(191, 10, 48);
-    --blue: rgb(0, 40, 104);
-    --yellow: rgb(254, 215, 0);
-    --header-font: "Playwrite AU SA", serif;
-    --support-font: "Inter", serif;
+main {
+    background-color: var(--red);
+    padding: 2rem;
+    min-height: calc(100vh - 200px);
+}
+
+h2 {
+    font-family: var(--header-font);
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 form {
@@ -58,7 +62,7 @@ textarea {
 }
 
 .help-text {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: var(--cooper);
     margin-top: -0.5rem;
     margin-bottom: 1rem;
@@ -92,8 +96,7 @@ button[type="submit"]:hover {
     background-color: var(--list-bg-alt);
     padding: 2rem;
     border-radius: 10px;
-    max-width: 600px;
-    margin: 0 auto;
+    margin: 1rem 0;
 }
 
 #thank-you-message h3 {
@@ -118,6 +121,7 @@ button[type="submit"]:hover {
 
 input:invalid {
     border-color: var(--cooper);
+    box-shadow: 0 0 5px var(--cooper);
 }
 
 input:valid {
