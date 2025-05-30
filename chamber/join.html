@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce Directory</title>
+    <meta name="description" content="Businesses will be able to join the Arizona Chamber of Commerce">
+    <meta name="author" content="Tyler McCleve">
+    <!--styles-->
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <!--Scripts-->
+    <script src="scripts/join.js" type="module"></script>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
+    <!--favicon link-->
+    <link rel="icon" href="favicon_az.ico">
+    <!-- Social media meta links -->
+    <meta property="og:title" content="Join">
+    <meta property="og:description" content="Join the Arizona Chamber of Commerce Organization">
+    <meta property="og:image" content="chamber/images/capital_resize.jpg">
+    <meta property="og:url" content="https://tylermc42.github.io/wdd231/chamber/">
+</head>
+<body>
+    <header>
+        <div class="logo">
+        <img src="images/capital_resize.jpg" alt="Arizona Chamber of Commerce Logo">
+        <h1>Arizona Chamber of Commerce</h1>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <main>
+        <h2>Join the Arizona Chamber of Commerce</h2>
+        <form id="join-form" novalidate>
+            <fieldset>
+                <legend>Your Information</legend>
+                <label for="first-name">First Name <span class="required">*</span></label>
+                <input type="text" id="first-name" name="first-name" required aria-required="true">
+
+                <label for="last-name">Last Name <span class="required">*</span></label>
+                <input type="text" id="last-name" name="last-name" required aria-required="true">
+
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required aria-required="true" placeholder="example@domain.com">
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(602) 555-1234">
+            </fieldset>
+
+            <fieldset>
+                <legend>Business Information</legend>
+                <label for="business-name">Business Name <span class="required">*</span></label>
+                <input type="text" id="business-name" name="business-name" required aria-required="true">
+
+                <label for="business-description">Business Description</label>
+                <textarea id="business-description" name="business-description" rows="4" aria-describedby="desc-help"></textarea>
+                <p id="desc-help" class="help-text">Provide a brief description of your business (max 500 characters).</p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Membership Level <span class="required">*</span></legend>
+                <label><input type="radio" name="membership-level" value="member" required aria-required="true"> Member</label>
+                <label><input type="radio" name="membership-level" value="bronze"> Bronze</label>
+                <label><input type="radio" name="membership-level" value="silver"> Silver</label>
+                <label><input type="radio" name="membership-level" value="gold"> Gold</label>
+            </fieldset>
+
+            <input type="hidden" name="submission-timestamp" id="submission-timestamp">
+
+            <button type="submit">Join Now</button>
+        </form>
+
+        <div id="thank-you-message" style="display: none;">
+            <h3>Thank You for Joining!</h3>
+            <p>We’ve received your application and will be in touch soon.</p>
+            <p><a href="join.html">Submit another application</a></p>
+        </div>
+    </main>
+    </main>
+        <footer>
+        <div class="footer_left">
+            <p>
+                Arizona Chamber of Commerce<br>
+                100 N 7th Ave #120<br>
+                Phoenix, AZ 85007<br>
+                membership@azchamber.com<br>
+                (602)248-4430
+            </p>
+        </div>
+        <div class="social_links">
+            <nav class="sociallinks">
+                <a href="https://facebook.com">
+                    <img src="images/facebook.jpg" alt='Facebook' height="50">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="images/x.png" alt='X' height="50">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram.jpg" alt='Instagram' height="50">
+                </a>
+            </nav>
+        </div>
+        <div class="footer_right">
+            <p>
+                WDD  231 Class Project<br>
+                Tyler McCleve</p>
+            <p>© <span id="copyright-year"></span> Arizona Chamber of Commerce</p>
+            <p>Date Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

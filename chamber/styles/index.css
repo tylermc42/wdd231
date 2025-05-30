@@ -1,0 +1,230 @@
+:root {
+    --cooper: rgb(206, 92, 23);
+    --red: rgb(191, 10, 48);
+    --blue: rgb(0, 40, 104);
+    --yellow: rgb(254, 215, 0);
+    --header-font: "Playwrite AU SA", serif;
+    --support-font: "Inter", serif;
+    --list-bg-alt: rgb(225, 240, 255); /* Light blue for zebra striping */
+}
+
+/* Hero and Call to Action */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.hero_image img {
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+}
+
+.call_to_action {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--yellow);
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.call_to_action a {
+    font-family: var(--support-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--blue);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.call_to_action a:hover {
+    color: var(--cooper);
+    text-decoration: underline;
+}
+
+/* Current Events Section */
+#current-events {
+    background-color: lightblue;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#current-events h3 {
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+    font-size: xx-large;
+}
+
+#events-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#events-container p {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+}
+
+/* Weather Widget */
+#weather {
+    background-color: lightblue;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#weather h3 {
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+    font-size: xx-large;
+}
+
+#current-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#current-weather img {
+    width: 50px;
+    height: auto;
+}
+
+#forecast {
+    margin-top: 1rem;
+}
+
+#forecast h4 {
+    font-size: larger;
+    border-top: 1px solid black;
+    padding-top: 10px;
+}
+
+#forecast-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.forecast-day {
+    background-color: var(--list-bg-alt);
+    padding: 0.5rem;
+    border-radius: 5px;
+    flex: 1;
+    min-width: 100px;
+    text-align: center;
+}
+
+.forecast-day p {
+    margin: 0.2rem 0;
+}
+
+.forecast-day img {
+    width: 40px;
+    height: auto;
+}
+
+/* Spotlight Section */
+#spotlight {
+    background-color: lightblue;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#spotlight h3 {
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+    font-size: x-large;
+}
+
+#spotlight-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.5rem;
+}
+
+.spotlight-card {
+    background-color: var(--list-bg-alt);
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.spotlight-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.spotlight-card h4 {
+    font-family: var(--header-font);
+    color: var(--blue);
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.spotlight-card p {
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+}
+
+@media (max-width: 768px) {
+    .call_to_action {
+        bottom: 10%;
+        padding: 0.5rem 1rem;
+    }
+    .call_to_action a {
+        font-size: 1.2rem;
+    }
+        .hero_image img {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+    #forecast-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .forecast-day {
+        width: 100%;
+        max-width: 300px;
+    }
+    #spotlight-container {
+        grid-template-columns: 1fr;
+    }
+    #events-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
+
+@media (max-width: 412px) {
+    .call_to_action {
+        bottom: 5%;
+        padding: 0.4rem 0.8rem;
+    }
+    .call_to_action a {
+        font-size: 1rem;
+    }
+}
