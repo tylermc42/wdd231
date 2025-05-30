@@ -20,12 +20,13 @@ menuToggle.addEventListener('click', () => {
 const form = document.getElementById('join-form');
 const errorMessage = document.getElementById('error-message');
 form.addEventListener('submit', (e) => {
+    e.preventDefault(); // Prevent default form submission
     if (form.checkValidity()) {
-        // Form is valid, allow default submission to thank-you.html
+        // Form is valid, redirect to thank-you.html
         errorMessage.style.display = 'none';
+        window.location.href = 'thankyou.html';
     } else {
-        // Form is invalid, prevent submission and show error
-        e.preventDefault();
+        // Form is invalid, show error
         errorMessage.textContent = 'Please fill out all required fields correctly.';
         errorMessage.style.display = 'block';
         form.reportValidity();
