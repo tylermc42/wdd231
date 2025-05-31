@@ -1,3 +1,13 @@
+:root {
+    --red: #c0392b;
+    --blue: #2980b9;
+    --yellow: #f1c40f;
+    --cooper: #d35400; 
+    --header-font: "Playwrite AU SA", serif;
+    --support-font: "Inter", serif;
+    --list-bg-alt: #f9f9f9;
+}
+
 main {
     background-color: var(--red);
     padding: 2rem;
@@ -49,6 +59,7 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+select,
 textarea {
     width: 100%;
     padding: 0.5rem;
@@ -59,8 +70,8 @@ textarea {
     box-sizing: border-box;
 }
 
-input[type="radio"] {
-    margin-right: 0.5rem;
+select {
+    height: 40px;
 }
 
 textarea {
@@ -73,6 +84,7 @@ textarea {
     color: black;
     margin-top: -0.5rem;
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 button[type="submit"] {
@@ -112,6 +124,13 @@ button[type="submit"]:hover {
     margin-bottom: 1rem;
 }
 
+#thank-you-message h4 {
+    font-family: var(--header-font);
+    color: var(--blue);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
 #thank-you-message p {
     margin-bottom: 1rem;
 }
@@ -126,15 +145,103 @@ button[type="submit"]:hover {
     color: var(--cooper);
 }
 
-input:invalid {
+input:invalid,
+select:invalid {
     border-color: var(--cooper);
     box-shadow: 0 0 5px var(--cooper);
 }
 
-input:valid {
+input:valid,
+select:valid {
     border-color: var(--blue);
 }
 
+/* Modal Styles */
+.modal {
+    display: none;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.modal.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    margin: 0.5rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: slideIn 1s ease-in-out;
+    line-height: 1.6;
+}
+
+/* Staggered animation for each modal content */
+#modal-np {
+    animation-delay: 1s;
+}
+
+#modal-bronze {
+    animation-delay: 1.5s;
+}
+
+#modal-silver {
+    animation-delay: 2s;
+}
+
+#modal-gold {
+    animation-delay: 2.5s;
+}
+
+.modal-content h3 {
+    font-family: var(--header-font);
+    color: var(--blue);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.modal-content p {
+    font-family: var(--support-font);
+    color: black;
+    font-size: 1rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.modal-close:hover {
+    color: var(--cooper);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        transform: translateY(-50px) scale(0.95); 
+        opacity: 0; 
+    }
+    to { 
+        transform: translateY(0) scale(1); 
+        opacity: 1; 
+    }
+}
+
+/* Responsive Modal Positioning */
 @media (max-width: 768px) {
     form {
         padding: 1rem;
@@ -151,6 +258,15 @@ input:valid {
     button[type="submit"] {
         padding: 0.5rem 1rem;
         font-size: 1rem;
+    }
+
+    .modal {
+        padding: 0.5rem 0;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
     }
 }
 
@@ -170,12 +286,26 @@ input:valid {
     input[type="text"],
     input[type="email"],
     input[type="tel"],
+    select,
     textarea {
         padding: 0.3rem;
     }
 
     button[type="submit"] {
         padding: 0.3rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .modal-content {
+        width: 98%;
+        padding: 1rem;
+    }
+
+    .modal-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .modal-content p {
         font-size: 0.9rem;
     }
 }

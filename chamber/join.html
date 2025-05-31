@@ -41,48 +41,85 @@
     </header>
     <main>
         <h1>Join the Arizona Chamber of Commerce</h1>
-        <div id="error-message"></div>
-        <form id="join-form" action="thankyou.html" method="get">
+        <form id="join-form" method="get" action="thankyou.html">
+            <div id="error-message"></div>
+
             <fieldset>
                 <legend>Your Information</legend>
                 <label for="first-name">First Name <span class="required">*</span></label>
-                <input type="text" id="first-name" name="first-name" required>
+                <input type="text" id="first-name" name="first-name" title="Enter your first name" autocomplete="given-name" required>
 
                 <label for="last-name">Last Name <span class="required">*</span></label>
-                <input type="text" id="last-name" name="last-name" required>
+                <input type="text" id="last-name" name="last-name" title="Enter your last name" autocomplete="family-name" required>
 
                 <label for="email">Email <span class="required">*</span></label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" title="Enter a valid email address" autocomplete="email" placeholder="example@domain.com" required>
 
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone">
+                <input type="tel" id="phone" name="phone" title="Enter your phone number" autocomplete="tel">
             </fieldset>
 
             <fieldset>
                 <legend>Business Information</legend>
                 <label for="business-name">Business Name <span class="required">*</span></label>
-                <input type="text" id="business-name" name="business-name" required>
+                <input type="text" id="business-name" name="business-name" title="Enter your business name" autocomplete="organization" required>
 
-                <label for="business-title">Business Title/Position <span class="required">*</span></label>
-                <input type="text" id="business-title" name="business-title" required>
+                <label for="business-title">Business Title/Position <span class="required"></span></label>
+                <input type="text" id="business-title" name="business-title" title="Enter your position or title (letters, hyphens, spaces only)" autocomplete="organization-title">
 
                 <label for="business-description">Business Description</label>
-                <textarea id="business-description" name="business-description" maxlength="500"></textarea>
+                <textarea id="business-description" name="business-description" title="Provide a brief description of your business (max 500 characters)" maxlength="500"></textarea>
                 <div class="help-text">Provide a brief description of your business (max 500 characters).</div>
             </fieldset>
 
             <fieldset>
                 <legend>Membership Level <span class="required">*</span></legend>
-                <label><input type="radio" name="membership-level" value="member" required> Non-Profit Member</label>
-                <label><input type="radio" name="membership-level" value="bronze"> Bronze</label>
-                <label><input type="radio" name="membership-level" value="silver"> Silver</label>
-                <label><input type="radio" name="membership-level" value="gold"> Gold</label>
+                <label for="membership-level">Select Membership Level:</label>
+                <select id="membership-level" name="membership-level" required>
+                    <option value="np">Non-Profit Member</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                </select>
+                <div class="help-text">
+                    <a href="#" class="membership-info-link" data-modal="modal-np">Learn more about membership levels</a>
+                </div>
             </fieldset>
 
             <input type="hidden" id="submission-timestamp" name="submission-timestamp">
             <button type="submit">Join Now</button>
         </form>
-    </main>
+
+        <!-- Modals for Membership Levels -->
+        <div class="modal" id="modal-np">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <h3>Non-Profit Member</h3>
+                <p>No fee for non-profit organizations. Includes basic networking opportunities.</p>
+            </div>
+        </div>
+        <div class="modal" id="modal-bronze">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <h3>Bronze Membership</h3>
+                <p>Includes access to events and basic advertising opportunities.</p>
+            </div>
+        </div>
+        <div class="modal" id="modal-silver">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <h3>Silver Membership</h3>
+                <p>Includes event discounts and enhanced advertising options.</p>
+            </div>
+        </div>
+        <div class="modal" id="modal-gold">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <h3>Gold Membership</h3>
+                <p>Includes priority event access, premium advertising, and training sessions.</p>
+            </div>
+        </div>
+    </main>    
     <footer>
         <div class="footer_left">
             <p>
