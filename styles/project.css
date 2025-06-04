@@ -1,0 +1,49 @@
+:root {
+    --main-color: blanchedalmond;
+    --second-color: cadetblue;
+    --third-color: rgb(182, 180, 180);
+    --header-font: "Playwrite AU SA", serif;
+    --support-font: "Inter", serif;
+}
+
+h1, h2 {
+    font-family: var(--header-font);
+}
+
+p {
+    font-family: var(--support-font);
+}
+
+header, footer {
+    background-color: var(--main-color);
+}
+
+main {
+    background-color: var(--second-color);
+}
+footer {
+    background-color: blanchedalmond;
+    text-align: center;
+    padding: 1rem;
+}
+.navigation a {
+    color: black;
+    font-size: large;
+}
+.navigation a:hover {
+    text-decoration: underline;
+    font-size: larger;
+}
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    flex-direction: row;
+    vertical-align: center;
+    padding-bottom: 1rem;
+}
+.head_bar {
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
