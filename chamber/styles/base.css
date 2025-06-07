@@ -652,7 +652,6 @@ select:valid {
 
 #cards-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     padding: 1rem;
     flex: 1;
@@ -735,8 +734,8 @@ select:valid {
     text-decoration: underline;
 }
 
-/* Responsive Grid Layout */
-@media (max-width: 768px) { /* Medium and small screens */
+/* Named Grid Areas for Responsive Layout */
+@media (min-width: 320px) and (max-width: 1024px) { /* Small and Medium screens */
     .container {
         flex-direction: column;
     }
@@ -745,14 +744,31 @@ select:valid {
         width: 80%;
     }
     #cards-container {
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
         grid-template-columns: 1fr;
     }
+    .card:nth-child(1) { grid-area: card1; }
+    .card:nth-child(2) { grid-area: card2; }
+    .card:nth-child(3) { grid-area: card3; }
+    .card:nth-child(4) { grid-area: card4; }
+    .card:nth-child(5) { grid-area: card5; }
+    .card:nth-child(6) { grid-area: card6; }
+    .card:nth-child(7) { grid-area: card7; }
+    .card:nth-child(8) { grid-area: card8; }
     .card img:hover {
         transform: none; /* Disable hover effect on mobile */
     }
 }
 
-@media (min-width: 769px) { /* Large screens */
+@media (min-width: 1025px) { /* Large screens */
     .container {
         flex-direction: row;
     }
@@ -760,8 +776,21 @@ select:valid {
         flex: 0 0 200px;
     }
     #cards-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+        grid-template-columns: 1fr 1fr;
     }
+    .card:nth-child(1) { grid-area: card1; }
+    .card:nth-child(2) { grid-area: card2; }
+    .card:nth-child(3) { grid-area: card3; }
+    .card:nth-child(4) { grid-area: card4; }
+    .card:nth-child(5) { grid-area: card5; }
+    .card:nth-child(6) { grid-area: card6; }
+    .card:nth-child(7) { grid-area: card7; }
+    .card:nth-child(8) { grid-area: card8; }
 }
 
 /* Responsive Design */
