@@ -1,0 +1,82 @@
+[
+    {
+        "plan": "3521",
+        "price": "$496,990",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "stories": 2,
+        "squareFootage": 1968,
+        "garage": "3-Car",
+        "image": "plan_3521.jpg"
+    },
+    {
+        "plan": "3522",
+        "price": "$523,990",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "stories": 2,
+        "squareFootage": 2173,
+        "garage": "2-Car",
+        "image": "plan_3522.jpg"
+    },
+    {
+        "plan": "3523",
+        "price": "$530,990",
+        "bedrooms": 4,
+        "bathrooms": 2,
+        "stories": 2,
+        "squareFootage": 2325,
+        "garage": "2-Car",
+        "image": "plan_3523.jpg"
+    },
+    {
+        "plan": "3524",
+        "price": "$551,990",
+        "bedrooms": 5,
+        "bathrooms": 3,
+        "stories": 2,
+        "squareFootage": 2648,
+        "garage": "2-Car",
+        "image": "plan_3524.jpg"
+    },
+    {
+        "plan": "4022",
+        "price": "$549,990",
+        "bedrooms": "3-4",
+        "bathrooms": 2,
+        "stories": 1,
+        "squareFootage": 2185,
+        "garage": "2-Car",
+        "image": "plan_4022.jpg"
+    },
+    {
+        "plan": "4023",
+        "price": "$554,990",
+        "bedrooms": "3-4",
+        "bathrooms": 2,
+        "stories": 1,
+        "squareFootage": 2352,
+        "garage": "2-Car",
+        "image": "plan_4023.jpg"
+    },
+    {
+        "plan": "4024",
+        "price": "$565,990",
+        "bedrooms": "3-4",
+        "bathrooms": 3,
+        "stories": 1,
+        "squareFootage": 2405,
+        "garage": "2-3 Car",
+        "image": "plan_4024.jpg"
+    },
+    {
+        "plan": "4026",
+        "price": "$637,990",
+        "bedrooms": "4-5",
+        "bathrooms": 3,
+        "stories": 2,
+        "squareFootage": 3062,
+        "garage": "3-Car",
+        "image": "plan_4026.jpg"
+    }
+]
