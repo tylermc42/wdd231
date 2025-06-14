@@ -78,5 +78,45 @@
         "squareFootage": 3062,
         "garage": "3-Car",
         "image": "plan_4026.jpg"
+    },
+    {
+        "plan": "Barletta",
+        "price": "$534,990",
+        "bedrooms": "3-4",
+        "bathrooms": 2,
+        "stories": 1,
+        "squareFootage": 1992,
+        "garage": "2-Car",
+        "image": "plan_barletta.jpg"
+    },
+    {
+        "plan": "Avelino",
+        "price": "$570,990",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "stories": 1,
+        "squareFootage": 2432,
+        "garage": "2-Car",
+        "image": "plan_avelino.jpg"
+    },
+    {
+        "plan": "Prato",
+        "price": "$608,990",
+        "bedrooms": "4-5",
+        "bathrooms": "2.5-3.5",
+        "stories": 2,
+        "squareFootage": 2830,
+        "garage": "2-Car",
+        "image": "plan_prato.jpg"
+    },
+    {
+        "plan": "Casoria",
+        "price": "$649,990",
+        "bedrooms": "4-5",
+        "bathrooms": "3.5-5.5",
+        "stories": 2,
+        "squareFootage": 3344,
+        "garage": "3-Car",
+        "image": "plan_casoria.jpg"
     }
 ]

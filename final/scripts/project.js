@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         plansContainer: document.getElementById('plans-container'),
         toggleAcclaim: document.getElementById('toggle-acclaim'),
         toggleAscent: document.getElementById('toggle-ascent'),
+        togglePulte: document.getElementById('toggle-pulte'),
         docList: document.getElementById('doc-list'),
         openModal: document.getElementById('open-modal'),
         closeModal: document.getElementById('close-modal'),
@@ -41,9 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (!homes || homes.length === 0) {
                         throw new Error('No home plans found in homes.json.');
                     }
-                    const filteredHomes = filter === 'acclaim'
-                        ? homes.filter(home => home.plan.startsWith('352'))
-                        : homes.filter(home => home.plan.startsWith('402'));
+                    let filteredHomes;
+                    if (filter === 'acclaim') {
+                        filteredHomes = homes.filter(home => home.plan.startsWith('352'));
+                    } else if (filter === 'ascent') {
+                        filteredHomes = homes.filter(home => home.plan.startsWith('402'));
+                    } else if (filter === 'pulte') {
+                        filteredHomes = homes.filter(home => ['Barletta', 'Avelino', 'Prato', 'Casoria'].includes(home.plan));
+                    }
                     if (filteredHomes.length === 0) {
                         elements.plansContainer.innerHTML = '<p>No home plans available for this category.</p>';
                         return;
@@ -52,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const card = document.createElement('div');
                         card.classList.add('plan-card');
                         card.innerHTML = `
-                            <img src="images/plan_${home.plan}.jpg" alt="Plan ${home.plan} Model Home" loading="lazy">
+                            <img src="images/${home.image}" alt="Plan ${home.plan} Model Home" loading="lazy">
                             <h3>Plan ${home.plan}</h3>
                             <p>Priced from ${home.price}</p>
                             <ul>
@@ -76,12 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
         displayHomes('acclaim');
 
         // Single event handler for toggle buttons
-        [elements.toggleAcclaim, elements.toggleAscent].forEach(button => {
+        [elements.toggleAcclaim, elements.toggleAscent, elements.togglePulte].forEach(button => {
             if (button) {
                 button.addEventListener('click', () => {
                     elements.toggleAcclaim.classList.toggle('active', button === elements.toggleAcclaim);
                     elements.toggleAscent.classList.toggle('active', button === elements.toggleAscent);
-                    displayHomes(button === elements.toggleAcclaim ? 'acclaim' : 'ascent');
+                    elements.togglePulte.classList.toggle('active', button === elements.togglePulte);
+                    displayHomes(button === elements.toggleAcclaim ? 'acclaim' : button === elements.toggleAscent ? 'ascent' : 'pulte');
                 });
             }
         });
@@ -116,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Visit counter for home page
-    if (window.location.pathname.includes('jorde_farms.html') && elements.homeText) {
+    if (window.location.pathname.includes('index.html') && elements.homeText) {
         let visitCount = parseInt(localStorage.getItem('visitCount') || '0') + 1;
         localStorage.setItem('visitCount', visitCount);
         elements.homeText.appendChild(Object.assign(document.createElement('p'), {

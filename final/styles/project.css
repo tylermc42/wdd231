@@ -112,15 +112,22 @@ nav a.active {
     font-size: larger;
 }
 
-.head_bar {
+.logo {
     display: flex;
-    border-bottom: 1px solid black;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
-.head_bar img {
+.logo img {
     width: 200px;
     height: auto;
+    margin-right: 0.5rem;
+}
+.site-title {
+    font-family: var(--header-font);
+    font-size: 2rem;
 }
 
 .home {
@@ -206,15 +213,12 @@ dialog {
 }
 
 .plans {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
     padding: 1rem;
-    transition: transform 0.3s ease; 
-}
-
-.plan-card:hover {
-    transform: scale(1.05);
 }
 
 .plan-card {
@@ -223,6 +227,13 @@ dialog {
     border-radius: 5px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 50%; 
+    margin: 0 auto; 
+    margin-bottom: 1.5rem;
+}
+
+.plan-card:hover {
+    transform: scale(1.05);
 }
 
 .plan-card img {
@@ -275,7 +286,6 @@ dialog {
     background-color: var(--main-color);
     color: black;
     font-weight: bold;
-
 }
 
 @media (min-width: 761px) {

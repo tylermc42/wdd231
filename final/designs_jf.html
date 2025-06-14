@@ -11,15 +11,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
     <script src="scripts/project.js" defer></script>
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Social media meta links -->
+    <meta property="og:title" content="Jorde Farms Community">
+    <meta property="og:description" content="Landing page for Jorde Farms community webpage">
+    <meta property="og:image" content="image/welcome_sign.jpg">
+    <meta property="og:url" content="https://tylermc42.github.io/wdd231/final/">
 
 </head>
 <body>
     <header>
-        <div class="head_bar">
-            <figure class="header_pic">
-                <img src="images/welcome_sign.jpg" alt="Welcome Sign" width="150">
-            </figure>
-            <h1>Jorde Farms Neighborhood</h1>
+        <div class="logo">
+            <img src="images/welcome_sign.jpg" alt="Welcome Sign" width="150">
+            <div class="site-title">Jorde Farms Neighborhood</div>
         </div>
         <nav>
            <button class="hamburger" aria-label="Toggle navigation">
@@ -35,14 +39,19 @@
         </nav> 
     
     </header>
-<main>
+    <main>
         <section id="design-section">
-            <h2>Acclaim and Ascent Home Plans</h2>
+            <h1>Acclaim and Ascent Home Plans</h1>
             <div class="toggle-buttons">
                 <button id="toggle-acclaim" class="active">Acclaim Homes</button>
                 <button id="toggle-ascent">Ascent Homes</button>
+                <button id="toggle-pulte">Pulte Homes</button>
             </div>
-            <div id="plans-container" class="plans"></div>
+            <div id="plans-container"></div>
+            <dialog id="design-modal">
+                <div id="modal-content"></div>
+                <button id="close-modal">Close</button>
+            </dialog>
         </section>
     </main>
     <footer>
