@@ -94,6 +94,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+document.getElementById('uploadForm').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    console.log('Form submitted with:', {
+        name: formData.get('name'),
+        address: formData.get('address'),
+        document: formData.get('document').name
+    });
+    // Note: Actual file upload would require a backend server (e.g., Node.js, PHP) to process FormData
+    alert('Form submitted! Check the console for details. (Note: File upload requires a server.)');
+});
+
     // Populate document list with file links
     if (window.location.pathname.includes('documents_jf.html') && elements.docList) {
         const docs = [
